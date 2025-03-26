@@ -12,21 +12,45 @@
 <body>
     <header></header>
     <main>
-        <div class="container">
-            <div class="raw">
+        <div class="container mt-4">
+            <div class="row">
                 <div class="col-6">
                     <form>
                         <div class="mb-3">
-                            <label for="exampleInputEmail1" class="form-label">Kilometri da percorrere</label>
+                            <label id="name" class="form-label">Inserisci il tuo nome</label>
+                            <input type="text" class="form-control" id="name" aria-describedby="emailHelp">
+                            <label id="km" class="form-label">Kilometri da percorrere</label>
                             <input type="text" class="form-control" id="km" aria-describedby="emailHelp">
                             <div id="emailHelp" class="form-text">più sarai preciso più il prezzo sarà veritiero</div>
                         </div>
                         <div class="mb-3">
-                            <label for="exampleInputPassword1" class="form-label">Inserisci la tua età</label>
+                            <label id="age" class="form-label">Inserisci la tua età</label>
                             <input type="text" class="form-control" id="age">
                         </div>
                         <button type="submit" class="btn btn-primary" id="btn">Calcola il prezzo finale</button>
                     </form>
+                </div>
+            </div>
+        </div>
+        </div>
+        <div class="container mt-4">
+            <h2>Il tuo biglietto</h2>
+            <div class="row">
+                <div class="col-3 mt-3">
+                    <div class="text-center">Nome passeggero</div>
+                    <div id="passengername" class="text-center"></div>
+                </div>
+                <div class="col-3 mt-3">
+                    <div class="text-center">Kilometri da percorrere</div>
+                    <div id="kilometer" class="text-center"></div>
+                </div>
+                <div class="col-3 mt-3">
+                    <div class="text-center">Età passeggero</div>
+                    <div id="passengerage" class="text-center"></div>
+                </div>
+                <div class="col-3 mt-3">
+                    <div class="texter-center">Costo finale</div>
+                    <div id="finalcost" class="text-center"></div>
                 </div>
             </div>
         </div>
