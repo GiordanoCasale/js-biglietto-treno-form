@@ -1,23 +1,24 @@
 //vado a richiamare le variabili del dom
-const kilometer = document.getElementById("km")
-const userAge = document.getElementById("age")
-const confirmBtn = document.getElementById("btn")
-let finalPrice = kilometer*0.21
+const button = document.getElementById("btn");
+
 
 //corpo del programma
-button.addEventlistener("click", function(){
+button.addEventListener("click", function (event) {
+    event.preventDefault();
+    const elementKilometer = document.getElementById("km").value;
+    const elementUserAge = document.getElementById("age").value;
+    let finalPrice = (elementKilometer * 0.21).toFixed(2);
 
-let kilometer = input.value.trim();
-let userAge = input.value.trim();
+    if (elementUserAge > 65) {
+        finalPrice = (finalPrice * 0.6).toFixed(2);
+    }else if (elementUserAge < 18) {
+        finalPrice = (finalPrice * 0.8).toFixed(2);
+    }
 
-if (userAge > 65) {
-    finalPrice = finalPrice * 0.6;
-}
 
-if (userAge < 18) {
-    finalPrice = finalPrice * 0.8;
-}
 
+
+    console.log("il prezzo totale è di " + finalPrice + "€");
 
 })
 
